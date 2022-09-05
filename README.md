@@ -1,10 +1,17 @@
-# Quizzical Trivia App (React)
+# Travel Journal (React Solo Project Solution)
 
-## Overview
-
-A travel journal app created with React using the create-react-app(CRA) npm command.
+This is my solution to the [React Travel Journal Solo Project](https://scrimba.com/learn/learnreact/react-section-2-solo-project-co74f46f2b22693c5ea577559) on Scrimba. The solo projects are part of the [Scrimba Platform's Courses](https://scrimba.com/allcourses).
 
 ### The challenge
+
+- Data array in a seperate .js file
+  - Title
+  - Location
+  - Google Maps
+  - Start Date
+  - End Date
+  - Description
+  - Image URL
 - Create a card component for each card
 - Pass props to each component
 - Style and polish the app as in the Figma design
@@ -32,36 +39,41 @@ A travel journal app created with React using the create-react-app(CRA) npm comm
 I learned and practiced the following concepts:
 
 - React Props
-- React State
 - Conditional Rendering
+- Rendering a collection of elements with `Array.map()` method
 
 **A snippet of the code I used**
+
 ```javascript
-import React from 'react'
-import pindropIcon from './img/pindrop.png'
+import React from "react";
+import pindropIcon from "./img/pindrop.png";
 
 function Card(props) {
-    console.log(props)
-    return (
-        <div className='card flex'>
-            <div className='card__img'>
-                <img src={props.item.imageUrl} alt={props.item.title} />
-            </div>
-            <div className='card__content'>
-                <div className='location flex'>
-                    <img src={pindropIcon} alt='pindrop icon' className='pindrop-icon' />
-                    <p className='location__country'>{props.item.location}</p>
-                    <a href={props.item.googleMapsUrl} className='location__url'>View on Google Maps</a>
-                </div>
-                <h2 className='card__title'>{props.item.title}</h2>
-                <p className='card__date'>{props.item.startDate} - {props.item.endDate}</p>
-                <p className='card__desc'>{props.item.description}</p>
-            </div>
-        </div>
-    )
+	console.log(props);
+	return (
+		<div className="card flex">
+			<div className="card__img">
+				<img src={props.item.imageUrl} alt={props.item.title} />
+			</div>
+			<div className="card__content">
+				<div className="location flex">
+					<img src={pindropIcon} alt="pindrop icon" className="pindrop-icon" />
+					<p className="location__country">{props.item.location}</p>
+					<a href={props.item.googleMapsUrl} className="location__url">
+						View on Google Maps
+					</a>
+				</div>
+				<h2 className="card__title">{props.item.title}</h2>
+				<p className="card__date">
+					{props.item.startDate} - {props.item.endDate}
+				</p>
+				<p className="card__desc">{props.item.description}</p>
+			</div>
+		</div>
+	);
 }
 
-export default Card
+export default Card;
 ```
 
 ## Author
@@ -70,6 +82,7 @@ export default Card
 - Twitter - [@LeKoels27](https://twitter.com/LeKoels27)
 
 ## Contributing
+
 Pull requests are very welcome and you may freely fork this repository.
 
 ## Supporting Scrimba
@@ -78,9 +91,10 @@ Since 2017, scrimba has created over 20 free courses and continue's launching fr
 
 - [Become a professional React developer](https://scrimba.com/course/greact)
 - [The Responsive Web Design Bootcamp](https://scrimba.com/course/gresponsive)
-- [The Ultimate JavaScript Bootcamp](https://scrimba.com/course/gjavascript)  
+- [The Ultimate JavaScript Bootcamp](https://scrimba.com/course/gjavascript)
 
 Happy Coding!
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
