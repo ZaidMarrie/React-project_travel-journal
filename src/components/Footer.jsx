@@ -2,9 +2,10 @@ import React from "react";
 
 function Footer() {
 	return (
-		<footer>
+		<footer className="footer flex align-items-center">
 			<a
-				href="https://github.com/ZaidMarrie/React-project_travel-journal"
+				href="https://github.com/ZaidMarrie/travel-journal-solo-project"
+				target="_blank"
 				rel="noopener noreferrer"
 			>
 				Project source code

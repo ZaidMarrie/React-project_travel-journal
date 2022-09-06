@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+:root {
+	--clr-accent: #f55a5a;
+	--clr-neutral-100: #ffffff;
+	--clr-neutral-300: #918e9b;
+	--clr-neutral-900: #2b283a;
+
+	--fs-400: 0.625rem;
+	--fs-500: 0.875rem;
+	--fs-700: 1.5625rem;
+}
+
+/* Resets & Globals */
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	font-size: var(--fs-400);
+	color: var(--clr-neutral-900);
+	background-color: var(--clr-neutral-100);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+/* Utility classes */
+.container {
+	width: min(100% - 2.5rem, 29.5rem);
+	margin-inline: auto;
+}
+
+.flex {
+	display: flex;
+	gap: var(--gap, 1rem);
+}
+
+.align-items-center {
+	align-items: center;
+}
+
+/* Header Styling */
+.header {
+	--gap: 7px;
+	color: var(--clr-neutral-100);
+	height: 3.4rem;
+	padding-block: 0.94rem;
+	margin-bottom: 2.8rem;
+	background-color: var(--clr-accent);
+	justify-content: center;
+}
+
+.header__logo {
+	width: 1.5rem;
+	aspect-ratio: 1;
+}
+
+.header__text {
+	font-size: var(--fs-500);
+	font-weight: 500;
+	letter-spacing: -0.075em;
+}
+
+/* Cards Styling */
+.card {
+	line-height: 120%;
+	min-height: 10.5rem;
+	margin-bottom: 2.25rem;
+}
+
+.card__img {
+	width: 7.8rem;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.card__location {
+	--gap: 4px;
+}
+
+.card__location > svg {
+	fill: var(--clr-accent);
+	height: 0.625rem;
+}
+
+.card__location > span {
+	letter-spacing: 0.17em;
+}
+
+.card__location > a {
+	color: var(--clr-neutral-300);
+	margin-left: 0.5rem;
+}
+
+.card__title {
+	font-size: var(--fs-700);
+	line-height: 1.2;
+	margin-top: 0.4rem;
+}
+
+.card__date {
+	font: inherit;
+	font-weight: 700;
+	margin-top: 1rem;
+	display: block;
+}
+
+.card__desc {
+	line-height: 150%;
+	margin-top: 0.56rem;
+}
+
+/* Footer Styling */
+
+.footer {
+	padding: 1rem;
+	background-color: var(--clr-neutral-900);
+	justify-content: center;
+}
+
+.footer > a {
+	color: var(--clr-neutral-100);
+}
+
+.footer > a:hover,
+.footer > a:focus {
+	color: var(--clr-accent);
+}
