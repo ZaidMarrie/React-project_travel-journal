@@ -22,8 +22,9 @@ This is my solution to the [React Travel Journal Solo Project](https://scrimba.c
 
 ### Links
 
-- [Live App Demo](https://zaidmarrie.github.io/travel-journal/)
-- [Source Code](https://github.com/ZaidMarrie/travel-journal)
+- [Live Solution 2021](https://zaidmarrie.github.io/travel-journal/)
+- [Live Solution 2022](https://zaids-travel-journal.netlify.app/)
+- [Source Code](https://github.com/ZaidMarrie/travel-journal-solo-project)
 
 ## My Process
 
@@ -45,35 +46,20 @@ I learned and practiced the following concepts:
 **A snippet of the code I used**
 
 ```javascript
-import React from "react";
-import pindropIcon from "./img/pindrop.png";
+import Card from "./Card";
+import journalData from "../journalData";
 
-function Card(props) {
-	console.log(props);
+function Cards() {
 	return (
-		<div className="card flex">
-			<div className="card__img">
-				<img src={props.item.imageUrl} alt={props.item.title} />
-			</div>
-			<div className="card__content">
-				<div className="location flex">
-					<img src={pindropIcon} alt="pindrop icon" className="pindrop-icon" />
-					<p className="location__country">{props.item.location}</p>
-					<a href={props.item.googleMapsUrl} className="location__url">
-						View on Google Maps
-					</a>
-				</div>
-				<h2 className="card__title">{props.item.title}</h2>
-				<p className="card__date">
-					{props.item.startDate} - {props.item.endDate}
-				</p>
-				<p className="card__desc">{props.item.description}</p>
-			</div>
-		</div>
+		<main className="container">
+			{journalData.map((dataEntry) => {
+				return <Card key={dataEntry.id} {...dataEntry} />;
+			})}
+		</main>
 	);
 }
 
-export default Card;
+export default Cards;
 ```
 
 ## Author
