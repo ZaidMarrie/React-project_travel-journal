@@ -22,7 +22,7 @@ This is my solution to the [React Travel Journal Solo Project](https://scrimba.c
 
 ### Links
 
-- [Live Solution 2021](https://zaidmarrie.github.io/travel-journal/)
+- [Live Solution 2021](https://6317060a39ad20000866af14--zaids-travel-journal.netlify.app/)
 - [Live Solution 2022](https://zaids-travel-journal.netlify.app/)
 - [Source Code](https://github.com/ZaidMarrie/travel-journal-solo-project)
 
@@ -33,7 +33,8 @@ This is my solution to the [React Travel Journal Solo Project](https://scrimba.c
 - HTML
 - CSS
 - JavaScript
-- React (create-react-app)
+- React18
+- Vite
 
 ### What I learned
 
